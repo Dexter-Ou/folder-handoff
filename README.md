@@ -5,6 +5,20 @@ missing, changed and extra files. Uses Python 3.10+ standard library; no account
 network or installation. This preview is intended for trusted local directories.
 It reads files; it never repairs or deletes them.
 
+## Download and run
+
+[Download the source ZIP](https://codeload.github.com/Dexter-Ou/folder-handoff/zip/6d8461518c42559e246f44939cfd5fc3fbf88663),
+extract it, and open a terminal in the extracted `folder-handoff-6d8461518c42559e246f44939cfd5fc3fbf88663`
+directory containing `handoff.py`. The ZIP is pinned to the executable revision;
+no package installation is required. Run `python3 handoff.py --help` to check
+that Python is available. Tested on Linux with Python 3.12.15.
+
+Use this when you already have both folders and want to compare their regular
+file contents. To check a transfer, create the manifest from the stopped original
+before delivery, send the manifest through a trusted channel, and verify the
+stopped delivered copy. Keep the original and your existing backup until you
+have reviewed the result. This tool does not transfer files or recover them.
+
 Keep the manifest **outside** the inventoried directory. Choose a new manifest
 filename and enable shell no-clobber before redirecting output:
 
